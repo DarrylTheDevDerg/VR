@@ -7,6 +7,7 @@ public class GenerateStuff : MonoBehaviour
     public float fullDuration;
 
     private float currentTime;
+    private int _r;
 
     public GameObject thing;
 
@@ -20,15 +21,29 @@ public class GenerateStuff : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
+        _r = Random.Range(0, 100);
     }
 
     IEnumerator Generate()
     {
+        float x = 0;
+        
+        switch (_r)
+        {
+            case < 50:
+                x = -0.47f;
+                break;
+            
+            case >= 50:
+                x = 0.47f;
+                break;
+        }
+        
         while (currentTime < fullDuration)
         {
             yield return new WaitForSeconds(secDelay);
 
-            Instantiate(thing);
+            Instantiate(thing, new Vector3(transform.position.x + Random.Range(-0.47f, 0.47f), transform.position.y), transform.rotation);
         }
     }
 }
