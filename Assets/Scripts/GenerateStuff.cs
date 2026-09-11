@@ -5,6 +5,7 @@ public class GenerateStuff : MonoBehaviour
 {
     public float secDelay;
     public float fullDuration;
+    public float setX;
 
     private float currentTime;
     private int _r;
@@ -26,24 +27,21 @@ public class GenerateStuff : MonoBehaviour
 
     IEnumerator Generate()
     {
-        float x = 0;
-        
-        switch (_r)
-        {
-            case < 50:
-                x = -0.47f;
-                break;
-            
-            case >= 50:
-                x = 0.47f;
-                break;
-        }
-        
         while (currentTime < fullDuration)
         {
             yield return new WaitForSeconds(secDelay);
 
-            Instantiate(thing, new Vector3(transform.position.x + Random.Range(-0.47f, 0.47f), transform.position.y), transform.rotation);
+            switch (_r)
+            {
+                case < 50:
+                    Instantiate(thing, new Vector3(transform.position.x + setX, transform.position.y, transform.position.z), transform.rotation);
+                    break;
+                
+                case >= 50:
+                    Instantiate(thing, new Vector3(transform.position.x - setX, transform.position.y, transform.position.z), transform.rotation);
+                    break;
+            }
+            
         }
     }
 }

@@ -16,7 +16,9 @@ public class MoveObject : MonoBehaviour
 {
     public Direction direction = Direction.X;
     public float speed = 5f;
-    public bool fuckYourGravity;
+    public float duration;
+    
+    public bool hasDestruct;
     
     private Rigidbody _rb;
     
@@ -24,40 +26,40 @@ public class MoveObject : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
+        
+        if (hasDestruct)
+        {
+            Destroy(gameObject, duration);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (fuckYourGravity)
-        {
-            _rb.useGravity = false;
-        }
-        
         switch (direction)
         {
             case Direction.X:
-                _rb.AddForce(speed * Time.deltaTime, 0f, 0f);
+                _rb.AddForce(speed, 0f, 0f);
                 break;
             
             case Direction.Y:
-                _rb.AddForce(0f, speed * Time.deltaTime, 0f);
+                _rb.AddForce(0f, speed, 0f);
                 break;
             
             case Direction.Z:
-                _rb.AddForce(0f, 0f, speed * Time.deltaTime);
+                _rb.AddForce(0f, 0f, speed);
                 break;
             
             case Direction.XY:
-                _rb.AddForce(speed * Time.deltaTime, speed * Time.deltaTime, 0f);
+                _rb.AddForce(speed, speed, 0f);
                 break;
             
             case Direction.YZ:
-                _rb.AddForce(0f, speed * Time.deltaTime, speed * Time.deltaTime);
+                _rb.AddForce(0f, speed, speed);
                 break;
             
             case Direction.XZ:
-                _rb.AddForce(speed * Time.deltaTime, 0f, speed * Time.deltaTime);
+                _rb.AddForce(speed, 0f, speed);
                 break;
             
             case Direction.None:
