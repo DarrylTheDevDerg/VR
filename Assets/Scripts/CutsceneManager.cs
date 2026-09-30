@@ -1,16 +1,16 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class CutsceneManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public PlayableDirector tl;
+    public bool isPaused;
 
-    // Update is called once per frame
-    void Update()
+    public void TimelineManip()
     {
-        
+        isPaused = !isPaused;
+
+        if (isPaused) tl.Play();
+        else tl.Pause();
     }
 }
