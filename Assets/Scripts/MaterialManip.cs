@@ -13,24 +13,17 @@ public class MaterialManip : MonoBehaviour
 
     private Color _orig;
     private bool _hasFaded, _inProcess;
-    private PlayerControls _i;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _orig = mat.material.color;
-        
-        if (debug)
-        {
-            _i = new PlayerControls();
-            _i.Enable();
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_i.Player.Jump.WasPressedThisFrame() && !_inProcess)
+        if (PlayerInputInstance.Instance.Input.Player.Jump.WasPressedThisFrame() && !_inProcess && debug)
         {
             StartCoroutine(_hasFaded ? ColorManip(_orig) : ColorManip(change));
         }
@@ -57,10 +50,5 @@ public class MaterialManip : MonoBehaviour
         _hasFaded = !_hasFaded;
         
         _inProcess = false;
-    }
-
-    void OnDisable()
-    {
-        _i.Disable();
     }
 }
