@@ -12,14 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c2282b64-3525-4844-aadb-cae61151f22d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainSequence.playable" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainSequence.playable.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/OculusRuntimeSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/OculusRuntimeSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/SequenceControl.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/SequenceControl.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainExperience.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainExperience.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem_Actions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem_Actions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MaterialManip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MaterialManip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SequenceMgmtTimeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SequenceMgmtTimeline.playable" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../POP/Assets/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../POP/Assets/Scripts/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AnimatorManipulator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.meta.xr.sdk.core@c0efcbf2ba70/Editor/MetaXRSimulator/LogUtils.cs" root0="SKIP_HIGHLIGHTING" />
   </component>

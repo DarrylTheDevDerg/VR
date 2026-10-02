@@ -51,4 +51,9 @@ public class MaterialManip : MonoBehaviour
         
         _inProcess = false;
     }
+    
+    public void StartFade()
+    {
+        StartCoroutine(_hasFaded ? ColorManip(_orig) : ColorManip(change));
+    }
 }
