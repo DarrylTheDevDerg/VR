@@ -19,15 +19,6 @@ public class MaterialManip : MonoBehaviour
     {
         _orig = mat.material.color;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (PlayerInputInstance.Instance.Input.Player.Jump.WasPressedThisFrame() && !_inProcess && debug)
-        {
-            StartCoroutine(_hasFaded ? ColorManip(_orig) : ColorManip(change));
-        }
-    }
     
     IEnumerator ColorManip(Color newColor)
     {
